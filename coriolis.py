@@ -1,14 +1,11 @@
 from mcpi.minecraft import Minecraft
 
 '''
-MATERIAL
 air = 0
 stone = 1
-slab = 44
 obs = 49
 ice = 79
 glow = 89
-glowred = 246
 core = 247
 '''
 
@@ -29,7 +26,7 @@ def sector(mc, x , y, z):
 	
 	#create planet
 	n = 0
-	b = [79, 247]
+	b = [22, 79, 247]
 	while n <= 9:
 		mc.setBlocks(x+6+n, y+2+n, z+1+n, x+74-n, y+2+n, z+74-n, (random.choice(b)))
 		if n == 0:
@@ -187,21 +184,50 @@ def relic(mc, x, y, z):
 		n = n + 1
 		
 	#create relic
-	
+	x = x + 22
+	y = y + 6
+	z = z + 38
+	mc.setBlocks(x+5, y+0, z+0, x+1, y+0, z+0, 42)
+	mc.setBlocks(x+5, y+1, z+0, x+4, y+1, z+0, 20)
+	mc.setBlocks(x+6, y+2, z+0, x+10, y+2, z+0, 20)
+	mc.setBlocks(x+11, y+2, z+0, x+11, y+2, z+0, 42)
+	mc.setBlocks(x+6, y+1, z+1, x+8, y+1, z+1, 35,11)
+	mc.setBlocks(x+6, y+1, z-1, x+8, y+1, z-1, 35,11)
+	mc.setBlocks(x+9, y+1, z+1, x+9, y+1, z+1, 42)
+	mc.setBlocks(x+9, y+1, z-1, x+9, y+1, z-1, 42)
+	mc.setBlocks(x+9, y+2, z+1, x+10, y+2, z+1, 35,11)
+	mc.setBlocks(x+9, y+2, z-1, x+10, y+2, z-1, 35,11)
+	mc.setBlocks(x+10, y+3, z+1, x+11, y+3, z+1, 35,11)
+	mc.setBlocks(x+10, y+3, z-1, x+11, y+3, z-1, 35,11)
+	mc.setBlocks(x+6, y-1, z+0, x+6, y-1, z+0, 42)
+	mc.setBlocks(x+6, y-1, z+1, x+7, y-1, z+1, 35,11)
+	mc.setBlocks(x+6, y-1, z-1, x+7, y-1, z-1, 35,11)
+	mc.setBlocks(x+8, y-2, z+1, x+10, y-2, z+1, 35,11)
+	mc.setBlocks(x+8, y-2, z-1, x+10, y-2, z-1, 35,11)
+	mc.setBlocks(x+6, y+0, z+1, x+6, y+0, z+1, 245)
+	mc.setBlocks(x+6, y+0, z-1, x+6, y+0, z-1, 245)
+	mc.setBlocks(x+7, y+0, z+1, x+7, y+0, z+1, 42)
+	mc.setBlocks(x+7, y+0, z-1, x+7, y+0, z-1, 42)
+	mc.setBlocks(x+9, y+0, z+1, x+9, y+0, z+1, 42)
+	mc.setBlocks(x+9, y+0, z-1, x+9, y+0, z-1, 42)
+	mc.setBlocks(x+8, y+0, z+2, x+10, y+0, z+2, 42)
+	mc.setBlocks(x+8, y+0, z-2, x+10, y+0, z-2, 42)
+	mc.setBlocks(x+11, y+0, z+3, x+13, y+0, z+3, 42)
+	mc.setBlocks(x+11, y+0, z-3, x+13, y+0, z-3, 42)
+	mc.setBlocks(x+14, y+0, z+4, x+15, y+0, z+4, 42)
+	mc.setBlocks(x+14, y+0, z-4, x+15, y+0, z-4, 42)
+	mc.setBlocks(x+16, y+0, z+5, x+17, y+0, z+5, 42)
+	mc.setBlocks(x+16, y+0, z-5, x+17, y+0, z-5, 42)
+	mc.setBlocks(x+9, y+0, z+0, x+9, y+0, z+0, 49)
+	mc.setBlocks(x+10, y+1, z+0, x+10, y+1, z+0, 35,1)
 	        
 def main():
 	mc = init()
 	x, y, z = mc.player.getPos()
-	'''
-	sector(mc, x-20, y-45, z-20)
-	frame(mc, x+5, y-10, z+5)
-	port(mc, x+18, y-10, z+8)
-	relic(mc, x-20, y-45, z-20)
-	'''
 	mc.player.setPos(70,30,70)
 	sector(mc, 50, -15, 50)
-	#frame(mc, 75, 20, 75)
-	#port(mc, 88, 20, 78)
+	frame(mc, 75, 20, 75)
+	port(mc, 88, 20, 78)
 	relic(mc, 50, -15, 50)
 
 main()
