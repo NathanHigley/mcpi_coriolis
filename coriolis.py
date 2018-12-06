@@ -10,8 +10,8 @@ core = 247
 '''
 
 def init():
-	mc = Minecraft.create()
-	#mc = Minecraft.create("10.183.3._", 4711)
+	#mc = Minecraft.create()
+	mc = Minecraft.create("10.183.3.25", 4711)
 	x,y,z = mc.player.getPos()
 	return mc
 	
