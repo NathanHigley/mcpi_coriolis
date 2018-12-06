@@ -10,8 +10,8 @@ core = 247
 '''
 
 def init():
-	#mc = Minecraft.create()
-	mc = Minecraft.create("10.183.3.25", 4711)
+	mc = Minecraft.create()
+	#mc = Minecraft.create("10.183.3._", 4711)
 	x,y,z = mc.player.getPos()
 	return mc
 	
@@ -222,7 +222,7 @@ def relic(mc, x, y, z):
 	mc.setBlocks(x+10, y+1, z+0, x+10, y+1, z+0, 35,1)
 	 
 def con(mc,x,y,z):
-	#create thing
+	#create logo
 	mc.setBlocks(x+18, y+5, z+1, x+1, y+5, z+1, 89)
 	mc.setBlocks(x+9, y+6, z+1, x+4, y+6, z+1, 89)
 	mc.setBlocks(x+8, y+7, z+1, x+5, y+7, z+1, 89)
@@ -240,36 +240,30 @@ def con(mc,x,y,z):
 	mc.setBlocks(x+2, y+10, z+1, x+2, y+10, z+1, 89)
 	mc.setBlocks(x+1, y+11, z+1, x+1, y+11, z+1, 89)
 	mc.setBlocks(x+1, y+11, z+1, x+12, y+11, z+1, 89)
-	#___________________
 	mc.setBlocks(x+13, y+10, z+1, x+13, y+10, z+1, 89)
 	mc.setBlocks(x+14, y+9, z+1, x+14, y+9, z+1, 89)
 	mc.setBlocks(x+15, y+8, z+1, x+15, y+8, z+1, 89)
 	mc.setBlocks(x+16, y+7, z+1, x+16, y+7, z+1, 89)
 	mc.setBlocks(x+17, y+6, z+1, x+17, y+6, z+1, 89)
 	mc.setBlocks(x+18, y+5, z+1, x+18, y+5, z+1, 89)
-	#___________________
 	mc.setBlocks(x+0, y+10, z+1, x+0, y+10, z+1, 89)
 	mc.setBlocks(x+-1, y+9, z+1, x+-1, y+9, z+1, 89)
 	mc.setBlocks(x+-2, y+8, z+1, x+-2, y+8, z+1, 89)
 	mc.setBlocks(x+-3, y+7, z+1, x+-3, y+7, z+1, 89)
 	mc.setBlocks(x+-4, y+6, z+1, x+-4, y+6, z+1, 89)
 	mc.setBlocks(x+-5, y+5, z+1, x+1, y+5, z+1, 89)
-	#___________________
 	mc.setBlocks(x+17, y+4, z+1, x+17, y+4, z+1, 89)
 	mc.setBlocks(x+16, y+3, z+1, x+16, y+3, z+1, 89)
 	mc.setBlocks(x+15, y+2, z+1, x+15, y+2, z+1, 89)
 	mc.setBlocks(x+14, y+1, z+1, x+14, y+1, z+1, 89)
 	mc.setBlocks(x+13, y+0, z+1, x+13, y+0, z+1, 89)
 	mc.setBlocks(x+12, y+-1, z+1, x+12, y+-1, z+1, 89)
-	#--------------------
 	mc.setBlocks(x+11, y+0, z+1, x+11, y+0, z+1, 89)
 	mc.setBlocks(x+10, y+1, z+1, x+10, y+1, z+1, 89)
 	mc.setBlocks(x+9, y+2, z+1, x+9, y+2, z+1, 89)
-	#___________________
 	mc.setBlocks(x+4, y+2, z+1, x+4, y+2, z+1, 89)
 	mc.setBlocks(x+3, y+1, z+1, x+3, y+1, z+1, 89)
 	mc.setBlocks(x+2, y+0, z+1, x+2, y+0, z+1, 89)
-	#___________________
 	mc.setBlocks(x+1, y+-1, z+1, x+1, y+-1, z+1, 89)
 	mc.setBlocks(x+0, y+0, z+1, x+0, y+0, z+1, 89)
 	mc.setBlocks(x+-1, y+1, z+1, x+-1, y+1, z+1, 89)
@@ -277,7 +271,6 @@ def con(mc,x,y,z):
 	mc.setBlocks(x+-3, y+3, z+1, x+-3, y+3, z+1, 89)
 	mc.setBlocks(x+-4, y+4, z+1, x+-4, y+4, z+1, 89)
 	mc.setBlocks(x+-5, y+5, z+1, x+-5, y+5, z+1, 89)
-	#__________________
 	mc.setBlocks(x+1, y+-1, z+1, x+11, y+-1, z+1, 89)
 		        
 def main():
